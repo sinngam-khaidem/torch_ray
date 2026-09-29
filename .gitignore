@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Build trees
+build/
+build-release/
+cmake-build-*/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Original NumPy scene dump. Re-download from the URL in README.md, or
+# regenerate data/*.pt from it with the snippet there.
+tiny_nerf_data.npz
+
+# Serialized tensors are training output and are regenerable.
+# data/*.pt are the scene inputs the binary needs, so they stay tracked.
+*.pt
+!data/*.pt
+
+# Training renders from the old preview path.
+output/
+
+# Run artifacts. metrics.json, EVALUATION.md, comparison.json, the holdout
+# PNGs and the comparison figures are the recorded results and stay tracked;
+# the per-frame orbit renders are bulk and do not.
+results/*/frames/
+
+# Vendored LibTorch (~324 MB). Download the 2.9.1 CPU build for your platform
+# from https://pytorch.org/get-started/locally/ and unpack it here.
+third_party/libtorch/
+
+# Working notes kept locally, not part of the published repo.
+literature.md
+REPORT.md
